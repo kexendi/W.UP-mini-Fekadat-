@@ -1,0 +1,64 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h3 class="page-header">Tranzakció áttekintő</h3>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <!-- <tbody ng-repeat="transactionOverview in transactionOverviews"> -->
+                <tbody>
+                <tr>
+                    <td>#</td>
+                    <td>{{transactionOverview.id}}</td>
+                </tr>
+                    <td>Forrás Számlaszám</td>
+                    <td>{{transactionOverview.forrasSzamlaSzam}}</td>
+                </tr>
+                    <td>Cél Számlaszám</td>
+                    <td>{{transactionOverview.celSzamlaSzam}}</td>
+                </tr>
+                    <td>Kedvezményezett Neve</td>
+                    <td>{{transactionOverview.kedvezmenyezettNeve}}</td>
+                </tr>
+                    <td>Utalás összege</td>
+                    <td>{{transactionOverview.osszeg}}</td>
+                </tr>
+                    <td>Devizanem</td>
+                    <td>{{transactionOverview.devizanem}}</td>
+                </tr>
+                    <td>Utalás dátuma</td>
+                    <td>{{transactionOverview.datum}}</td> 
+                </tr>
+                    <td>Közlemény</td>                    
+                    <td>{{transactionOverview.kozlemeny}}</td>
+                </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+                <tr>
+                        <td>#</td>
+                        <td>{{transactionOverview.id}}</td>
+                    </tr>
+                        <td>Forrás Számlaszám</td>
+                        <td>{{transactionOverview.forrasSzamlaSzam}}</td>
+                    </tr>
+                        <td>Cél Számlaszám</td>
+                        <td>{{transactionOverview.celSzamlaSzam}}</td>
+                    </tr>
+                        <td>Kedvezményezett Neve</td>
+                        <td>{{transactionOverview.kedvezmenyezettNeve}}</td>
+                    </tr>
+                        <td>Utalás összege</td>
+                        <td>{{transactionOverview.osszeg}}</td>
+                    </tr>
+                        <td>Devizanem</td>
+                        <td>{{transactionOverview.devizanem}}</td>
+                    </tr>
+                        <td>Utalás dátuma</td>
+                        <td>{{transactionOverview.datum}}</td> 
+                    </tr>
+                        <td>Közlemény</td>                    
+                        <td>{{transactionOverview.kozlemeny}}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

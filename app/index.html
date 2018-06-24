@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mini feladat</title>
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../login/login.css">
+  <link rel="stylesheet" href="../accounts/accounts.css">
+  <link rel="stylesheet" href="../account_details/account_details.css">
+  <link rel="stylesheet" href="../transaction/transaction.css">
+</head>
+
+<body>
+   <div ng-if="isVisible" ng-controller="MenuCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"aria-controls="navbar"></button>
+          <a class="navbar-brand">Üdvözlünk, ADMIN</a>
+        </div>
+
+        <!-- Jobb felső menü -->
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/#!/dashboard">Kezdőlap</a></li>
+            <li><a href="/#!/login">Kilépés</a></ul>
+
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Kereső...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bal oldali Sidebar -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active">Számla áttekintő</li>
+            <li><span>Számlarészletező</span></li>
+            <li><span>Tranzakció áttekintő</span></li>
+            <li><span ng-click="loadTransaction()">Utalás</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-view></div>
+  
+  <!-- <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <script src="app.js"></script>
+  
+  <!-- service -->
+  <script src="service/accountService.js"></script>
+  <script src="service/userService.js"></script>
+  <script src="service/accountDetailsService.js"></script>
+  <script src="service/transactionOverviewService.js"></script>
+  
+  <!-- controller -->
+  <script src="accounts/accounts.js"></script>
+  <script src="login/login.js"></script>
+  <script src="account_details/account_details.js"></script>
+  <script src="transaction/transaction.js"></script>
+  <script src="menu/menu.js"></script>
+  
+</body>
+
+</html>

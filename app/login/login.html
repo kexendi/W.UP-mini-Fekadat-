@@ -1,0 +1,18 @@
+<div class="container" ng-controller="LoginCtrl">
+
+    <form class="form-signin">
+        <h2 class="form-signin-heading text-center">Bejelentkezés</h2>
+
+        <label for="inputEmail" class="sr-only"></label>
+        <input type="text" ng-model="username" class="form-control text-center" placeholder="Felhasználónév" required autofocus>
+
+        <label for="inputPassword" class="sr-only"></label>
+        <input type="password" ng-model="password" class="form-control text-center" placeholder="Jelszó" required>
+
+
+        <div class="alert alert-danger text-center" role="alert" ng-if="errorMessage"> Hibás felhasználónév vagy jelszó </div>
+
+        <button class="btn btn-lg btn-primary btn-block" ng-click="loadDashboard()" type="submit">Belépés</button>
+    </form>
+
+</div>
